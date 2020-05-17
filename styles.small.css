@@ -261,6 +261,10 @@ a.button
     width: 60%;
 }
 
+#interview #intro {
+    background-position: center 90px;
+}
+
 #interview #what_happens .wrapper {
     max-width: 420px;
 }
@@ -287,6 +291,10 @@ a.button
 
 #interview #you_will_get .col {
     width: 50%;
+}
+
+#interview #request_simulation .simulation-modal-content {
+    width: 70%;
 }
 
 @media all and (max-width: 668px) {

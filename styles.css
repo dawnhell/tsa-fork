@@ -1626,8 +1626,14 @@ h2
     min-width: 320px;
 }
 
+#interview #navbar {
+    height: 90px;
+    align-items: center;
+}
+
 #interview #intro {
     background-image: url(media/interview.jpg);
+    background-position: center 90px;
     height: 48rem;
     position: relative;
 }
@@ -1641,7 +1647,7 @@ h2
     left: 0;
     right: 0;
     z-index: 0;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.54), transparent);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.6), transparent);
 }
 
 #interview #intro .layer {
@@ -1694,7 +1700,6 @@ h2
     height: 30rem;
 }
 
-
 #interview #what_happens:after {
     content: '';
     background-image: url(media/pitch_decoration.svg);
@@ -1720,15 +1725,14 @@ h2
 #interview #what_happens h2 {
     color: var(--intro-text-color);
     font-family: var(--standout-font);
-    font-size: var(--header-font-size);
+    font-size: var(--subheader-font-size);
     font-weight: var(--header-font-weight);
-    text-align: center;
     margin: 0;
     padding-bottom: 0.5rem;
 }
 
 #interview #what_happens h3 {
-    color: var(--def-text-color);
+    color: var(--intro-text-color);
 
     margin: 0;
     padding-bottom: 0.5rem;
@@ -1866,7 +1870,7 @@ h2
     font-family: var(--content-font);
     margin: 0;
     text-align: center;
-    width: 70%;
+    width: 80%;
 }
 
 #interview #request_simulation {
@@ -1895,3 +1899,95 @@ h2
     width: 200px;
     margin: 0 auto;
 }
+
+#interview #request_simulation .simulation-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-background-color);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#interview #request_simulation .simulation-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2.5rem;
+    width: 50%;
+    border-radius: 0.5rem;
+}
+
+#interview #request_simulation .close-button {
+    position: absolute;
+    font-size: 3rem;
+    cursor: pointer;
+    top: 0;
+    right: 18px;
+    transition: transform .3s;
+    color: var(--dark-header-text-color);
+}
+
+#interview #request_simulation .close-button:hover {
+    transform: scale(1.1);
+}
+
+#interview #request_simulation .show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 3;
+}
+
+#interview #request_simulation form {
+
+}
+
+#interview #request_simulation .form-group {
+    margin-bottom: 1rem;
+}
+
+#interview #request_simulation .form-group label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+
+#interview #request_simulation .form-group .form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: var(--dark-header-text-color);
+    font-size: var(--button-font-size);
+    font-weight: var(--def-font-weight);
+    font-family: var(--content-font);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+}
+
+#interview #request_simulation .submit-button {
+    color: var(--button-text-color);
+    background-color: var(--button-background-color);
+    border-color: var(--button-background-color);
+    padding: 0.5rem 2rem;
+    font-size: var(--button-font-size);
+    text-decoration: none;
+    text-align: center;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 0.35rem;
+    cursor: pointer;
+}
+
