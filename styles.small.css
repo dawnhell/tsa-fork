@@ -298,6 +298,14 @@ a.button
 }
 
 @media all and (max-width: 668px) {
+    #interview #intro .banner {
+        background-position: -100px -90px;
+    }
+
+    #interview #intro .layer #intro_box {
+        bottom: 15%;
+    }
+
     #interview #what_happens .wrapper {
         max-width: 80%;
     }
